@@ -11,9 +11,14 @@ html {
   font-size: 16px;
 }
 
+h1 {
+  font-weight: 700;
+  font-size: 3.6rem;
+}
+
 /* This is creating a variable (color) to be used in the javascript file, so that when form is submitted with empty fields, the placeholder changes color to show the error message in the different color. */
 ::placeholder {
-  color: var(--c, rgb(149, 140, 140));
+  color: var(--c, rgb(124, 118, 118));
 }
 /* styling error message for no-validated email */
 #error-Email {
@@ -41,7 +46,7 @@ a {
   1fr minmax(300px, 500px) minmax(300px, 500px) 1fr;/*space between the columns */
   justify-content: center;
   align-content: center;
-  grid-column-gap: 30px;
+  grid-column-gap: 7rem;
 }
 
 .container1 {
