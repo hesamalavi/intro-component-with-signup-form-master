@@ -1,0 +1,203 @@
+html {
+  background-image: url(/images/bg-intro-desktop.png);
+  background-color: hsl(0, 100%, 74%);
+  --pRed: hsl(0, 100%, 74%);
+  --pGreen: hsl(154, 59%, 51%);
+  --aBlue: hsl(248, 32%, 49%);
+  --nBlue: hsl(249, 10%, 26%);
+  --nGrey: hsl(246, 25%, 77%);
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  --boxShadow: 0px 10px 5px -1px rgba(41, 38, 38, 0.3);
+
+    
+}
+#error-FirstName, #error-LastName, #error-Email, #error-Password  {
+  background-color: rgb(255, 0, 0);
+  color: white;
+  font-size: 0.8rem;
+  text-align: center;
+  border-radius: 10px;
+    /* transition-timing-function: ease; */
+
+  transition-delay: 200ms;
+} 
+
+a {
+  color: var(--pRed);
+  text-decoration: none;
+
+}
+
+
+.container {
+  /* min-height: 1050px; */
+  display: grid;
+  /* grid-template-rows: 100px 100px 300px 100px;
+  grid-template-columns: 200px 400px 400px 200px; */
+  grid:
+  ". . . ." 150px /*space between the rows */
+  ". . container2 ." 50px
+  ". container1 container3 ." 40vh
+  ". . container3 ." 1fr
+  ". . . ." 100px/
+  1fr minmax(300px, 500px) minmax(300px, 500px) 1fr;/*space between the columns */
+  justify-content: center;
+  align-content: center;
+  /* justify-items: center; */
+  grid-column-gap: 30px;
+
+
+  /* grid-area: ". . . ."
+    ". . container2 ."
+    ". container1 container3 ."
+    ". . . ."; */
+
+}
+
+.container1 {
+  grid-area: container1;
+  /* grid-area: 3 / 2 / 4 / 3; */
+  align-self: center;
+  color: white;
+}
+
+.container2 {
+  background-color: var(--aBlue);
+  color: white;
+  grid-area: container2;
+  /* grid-area: 2 / 3 / 3 / 4; */
+  align-self: end;
+  /* justify-self: end; */
+  align-content: center;
+  text-align: center;
+  /* padding-bottom: 10px; */
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.container3 {
+  background-color: white;
+
+  border-radius: 5px;
+  grid-area: container3;
+  /* padding-bottom: 200px; */
+  /* grid-area: 3 / 3 / 5 / 4; */
+  /* padding: 20px; */
+  /* display: grid; */
+  /* place-items: space-between; */
+}
+
+.container2,.container3{
+  box-shadow: var(--boxShadow);
+}
+
+.form {
+  /* max-width: 500px; */
+  /* padding: 20px; */
+  display: grid;
+  grid-gap: 10px;
+  margin: 2rem ;
+  box-sizing: border-box;
+  /* justify-content: space-around; */
+  /* align-items: center; */
+  /* width: 30.5rem; */
+
+  
+}
+input {
+  padding: 1.6em;
+      border-radius: 5px;
+border: 1.5px solid rgb(230, 228, 228);
+  font-weight: 700;
+
+  /* width: 18.5rem; */
+}
+
+#form-agreement {
+  color: var(--nGrey);
+}
+/* input#submit {
+  padding: 100px 100px 20px 30px;
+  margin: 10px;
+} */
+
+#bottom-form {
+  display: grid;
+  font-size:0.5em;
+ justify-items: center;
+  
+  /* display: flexbox; */
+  /* padding: 10px; */
+  /* display: grid; */
+}
+
+input[type=submit] {
+  border-color: var(--pGreen);
+  padding:1.6em; 
+    /* width: 20rem; */
+
+    background: var(--pGreen); 
+    /* border:0 none; */
+    cursor:pointer;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    box-shadow: 0 5px 0 0 hsl(154, 58%, 43%);
+}
+
+
+@media only screen and (max-width:860px) {
+ 
+  .container {
+  display: grid;
+  /* grid-template-rows: 100px 100px 300px 100px;
+  grid-template-columns: 200px 400px 400px 200px; */
+  grid:
+   /*space between the rows */
+  ". container1 ." 300px
+  ". container2 ." 100px
+  ". container3 ." 400px
+  ". . ." 100px/
+  1fr minmax(300px, 700px) 1fr;/*space between the columns */
+  justify-content: center;
+  align-content: center;
+  /* justify-items: center; */
+  grid-column-gap: 30px;
+
+
+
+}
+
+
+
+#bottom-form {
+  display: block;
+  font-size:0.7em;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: -10px;
+ /* justify-items: center; */
+  
+  /* display: flexbox; */
+  /* padding: 10px; */
+  /* display: grid; */
+}
+
+body {
+  text-align: center;
+}input {
+  padding: 1.7em;
+}
+
+  input[type=submit] {
+/* font-size: 1.2em; */
+font-weight: 500;
+  }
+
+} 
+
+
+::placeholder {
+  color: var(--c, rgb(149, 140, 140));
+}
