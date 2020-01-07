@@ -1,3 +1,9 @@
+input {
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+}
+
 html {
   background-image: url(images/bg-intro-desktop.png);
   background-color: hsl(0, 100%, 74%);
@@ -101,7 +107,6 @@ border: 1.5px solid rgb(230, 228, 228);
 }
 
 input[type=submit] {
-  -webkit-appearance: none;
   border-color: var(--pGreen);
   padding:1.6em; 
     background: var(--pGreen); 
