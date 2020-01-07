@@ -114,7 +114,7 @@ input[type=submit] {
   grid:
   ". container1 ." 300px
   ". container2 ." 100px
-  ". container3 ." 400px
+  ". container3 ." 450px
   ". . ." 100px/
   1fr minmax(300px, 700px) 1fr;
   justify-content: center;
