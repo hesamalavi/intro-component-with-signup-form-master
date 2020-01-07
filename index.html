@@ -9,11 +9,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
   <title>Frontend Mentor | Intro component with sign up form</title>
-
-
-
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution {
       font-size: 11px;
@@ -28,7 +23,6 @@
     @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
   </style>
   <link rel="stylesheet" href="/styles.css" />
-
 </head>
 
 <body>
@@ -49,29 +43,20 @@
     <div class="container3">
 
       <form id="form" class="form" action="/" method="GET">
-        <div id="error-FirstName"></div>
-
         <input id="FirstName" type="text" placeholder="First Name" />
-        <div id="error-LastName"></div>
-
         <input id="LastName" type="text" placeholder="Last Name" />
+
+        <!-- This is to show an error when email is not validated -->
         <div id="error-Email"></div>
-
-        <input id="EmailAddress" type="email" placeholder="Email Address" />
-        <div id="error-Password"></div>
-
+        <input id="EmailAddress" type="text" placeholder="Email Address" onblur="validateEmail(this);" />
         <input id="Password" type="password" placeholder="Password" />
-        <input onclick="update()" id="submit" type="submit" value="Claim your free trial" name=""
-          onblur="validateEmail(this);" />
-
+        <input onclick="update()" id="submit" type="submit" value="Claim your free trial" name="" />
       </form>
       <section id="bottom-form">
         <span id="form-agreement"> By clicking the button, you are agreeing to our <a href="">Terms and
             Services</a></span>
-
       </section>
       <h2 id='result'></h2>
-
     </div>
   </div>
   <footer>
@@ -82,7 +67,6 @@
     </p>
   </footer>
   <script src="/main.js"></script>
-
 </body>
 
 </html>
