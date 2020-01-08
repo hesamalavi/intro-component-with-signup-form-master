@@ -7,13 +7,13 @@ const errorEmail = document.getElementById('error-Email')
 
 // function to change the placeholder color when there is an error
 function update() {
- document.querySelector('input[type=text]').style.setProperty("--c", "red")
+ document.querySelectorAll('input[type=text]')[0].style.setProperty("--c", "red")
  document.querySelectorAll('input[type=text]')[1].style.setProperty("--c", "red")
- document.querySelectorAll('input[type=text]')[2].style.setProperty("--c", "red")
+ document.querySelectorAll('input[type=email]')[0].style.setProperty("--c", "red")
  document.querySelectorAll('input[type=password]')[0].style.setProperty("--c", "red")
 }
 
-// Form error messages when the fields are empty (after submitting)
+// Form error messages when the fields are left empty after submitting.
 
 // First Name error message
 form.addEventListener('submit', (e) => {
@@ -26,7 +26,7 @@ form.addEventListener('submit', (e) => {
   e.preventDefault()
   document.getElementById("FirstName").placeholder = messages.join(', ')
  } else {
-  document.getElementById("FirstName").placeholder = '';
+  return true
  }
 })
 
@@ -78,24 +78,15 @@ form.addEventListener('submit', (e) => {
 
 })
 
-// Email validation and error message
-function validateEmail(emailField) {
- var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+// Simpler Email validation and error message
 
- if (reg.test(emailField.value) == false) {
-  errorEmail.innerText = 'Looks like this is not an email';
-  return false;
- }
- {
-
-  errorEmail.innerText = "";
-  return true;
- }
+// const emailValidate = document.getElementById("EmailAddress");
+function validEmail() {
+ email.addEventListener("input", function (event) {
+  if (email.validity.typeMismatch) {
+   email.setCustomValidity("Looks like this is not an email");
+  } else {
+   email.setCustomValidity("");
+  }
+ });
 }
-
-
-
-
-
-
-
