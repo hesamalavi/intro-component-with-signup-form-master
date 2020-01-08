@@ -22,7 +22,7 @@
   <style>
     @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
   </style>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body>
@@ -41,17 +41,17 @@
       </p>
     </div>
     <div class="container3">
+      <!-- onsubmit="return validateEmail(document.getElementById('EmailAddress'))" -->
 
-     <form id="form" class="form" action="https://formspree.io/mzbdlwlb" method="POST">
+      <form id="form" class="form" action="https://formspree.io/mzbdlwlb" method="POST">
         <input id="FirstName" type="text" placeholder="First Name" name="FirstName" />
         <input id="LastName" type="text" placeholder="Last Name" name="LastName" />
 
         <!-- This is to show an error when email is not validated -->
         <div id="error-Email"></div>
-        <input id="EmailAddress" type="text" placeholder="Email Address" onblur="validateEmail(this);"
-          name="EmailAddress" />
+        <input id="EmailAddress" type="email" placeholder="Email Address" onblur="validEmail();" name="EmailAddress" />
         <input id="Password" type="password" placeholder="Password" name="Password" />
-        <input onclick="update()" id="submit" type="submit" value="Claim your free trial" name="Submit" />
+        <input onclick="update()" id=" submit" type="submit" value="Claim your free trial" name="Submit" />
       </form>
       <section id="bottom-form">
         <span id="form-agreement"> By clicking the button, you are agreeing to our <a href="">Terms and
@@ -67,7 +67,7 @@
         href="https://github.com/hesamalavi/intro-component-with-signup-form-master">Hesam Alavi</a>.
     </p>
   </footer>
-  <script src="main.js"></script>
+  <script src="/main.js"></script>
 </body>
 
 </html>
